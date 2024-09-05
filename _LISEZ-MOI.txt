@@ -1,0 +1,297 @@
+﻿- Pour télécharger AlteRate : 
+https://drive.google.com/drive/folders/1mAjCIdx8fq2zuu4UtM4W7jBZDvan4L_S?usp=sharing
+
+- Pour partager tes cartes uniques (uniquement les captures PNG généré par AlteRate) : 
+https://drive.google.com/drive/folders/1N1m0nDZoN3GMcqzeqtkHLs9xf7A7Mh7x
+
+- AVANT PROPOS
+Altered TCG est un jeu de cartes à collectionner novateur, propriété de la société Equinox.
+Cette application n'est pas affilié à Equinox, elle est créé par un fan pour les fans.
+Les illustrations sont la propriétés d'Equinox et leur auteurs (voir : https://www.artstation.com/alteredtcg)
+
+- ALTERATE, C'EST QUOI ?
+AlteRate est un outil qui permet d'estimer la puissance d'une carte unique du jeu Altered. Pour cela tu dois entrer les informations de 
+ta carte dans l'application, puis un score est généré.
+Comme il existe une infinité de capacités, puisqu'il existe une infinité de carte unique au monde, c'est impossible d'implémenter toutes
+les capacités que l'on trouvera sur les cartes uniques. Alors, l'outil permet de créer une nouvelle capacité à l'aide de morceau de phrase.
+
+- COMMENT UTILISER L'APPLICATION ?
+Pour lancer l'application, double clique sur le fichier : Altered.exe
+En premier, change le logo de l'édition en cliquant dessus (en bas à gauche de la carte)
+Remplis les valeurs de ta carte unique dans les champs suivant :
+- Coup de main
+- Coup de réserve
+- Valeur forêt
+- Valeur montagne
+- Valeur eau
+Puis selectionne dans les listes déroulantes les capacités de la carte (jusqu'à 3 max) 
+(les listes sont surlignés en doré au passage de la souris)
+Si la carte a moins de 3 capacités, ne selectionne pas les listes déroulantes supplémentaire. 
+Puis selectionne dans la liste déroulante une capacité de soutien si la carte en possède une.
+Selectionne le nom du Personnage dans le titre en haut de la carte
+Enfin, clique sur le bouton calculer (en bas à droite)
+=> Les scores s'affichent en bas de la carte.
+
+- COMMENT CRÉER UNE NOUVELLE CAPACITÉ UNIQUE ?
+Si la capacité n'existe pas dans la liste des capacités, appuie sur le bouton "+" au centre de la carte, pour
+créer une nouvelle capacité unique, elle apparaitra ensuite dans la liste des capacités
+Voici un exemple :
+{reserve} Vous pouvez mettre une carte de votre main en Réserve. Si vous le faites : Un Personnage ciblé gagne Ancré.
+Sur la vue création de capacité (appuie sur le bouton [+]) tu peux selectionner des morceaux de phrase dans les liste déroulantes :
+LISTE DÉROULANTE => MORCEAU DE PHRASE
+Déclencheur => {reserve}
+Choix => Vous pouvez mettre une carte de votre main en Réserve
+Ponctuation => .
+Condition => Si vous le faites
+Ponctuation => :
+Talent => Un Personnage ciblé gagne Ancré
+Ponctuation => .
+Avec ces listes déroulantes, vous êtes capable d'ajouter une nouvelle capacité. 
+Il suffit de cliquer sur le bouton Enregistrer (pour sauver et continuer à créer une autre capacité)
+ou Valider (pour revenir sur la vue de création d'une carte)
+Notez qu'un morceau de phrase est TOUJOURS présent dans l'une des listes « catégorie » (en vert), et parfois dans plusieurs listes « terme » (en bleu).
+Ainsi, le morceau suivant "Un Personnage ciblé gagne Ancré" peut être trouvé dans Talent, mais aussi dans Personnage, Cibler, Gagner.
+À vous de choisir votre liste préféré. Parfois il y a moins d'élément dans une liste que dans une autre ce qui facilite la recherche.
+De plus, vous pouvez appuyer sur une touche du clavier pour filtrer la liste sur cette première lettre.
+
+- COMMENT LIRE LE SCORE ?
+c'est aussi simple qu'un pourcentage. 
+Proche de 0% c'est franchement mauvais. 
+Proche de 100% c'est insane (génial) !
+La communauté peut uploader ses cartes générés par AlteRate, ainsi tu pourra comparer ton score avec les autres cartes uniques :
+https://drive.google.com/drive/folders/1N1m0nDZoN3GMcqzeqtkHLs9xf7A7Mh7x?usp=sharing
+Quand tu clic sur le bouton calculer, en plus de donner un score à ta carte, l'application créé une capture d'écran qui est placé dans le 
+répertoire PNG. Tu as juste à glisser-déplacer ce fichier dans le répertoire du drive partagé. 
+
+- COMMENT EST ÉTALONNÉ L'ÉCHELLE DES POURCENTAGES DES CARTES ?
+(valable à partir de la v0.27)
+Très bonne question, merci de l'avoir posé. J'utilise 2 cartes étalons qui me permettent d'avoir une valeur Min et Max.
+La carte étalon de valeur Min est une (5)(5) 1/1/1 qui vaut : 1.837%
+La carte étalon de valeur Max est une (1)(1) 5/5/5 qui vaut : 99.193%
+Une carte vanilla (1)(1) 1/1/1 vaut : 5%
+
+- PUIS-JE AVOIR UN EXEMPLE DE CARTE ET SA PUISSANCE ?
+Voici un exemple de carte unique, dont le score a changé en fonction de l'échelle utilisé dans les différentes versions.
+Puissant Jinn : (4)(4) 4/4/0
+{main} Vous pouvez payez {1}. Si vous le faites : Lancez un dé. Sur 4+, piochez une carte. Sur 1-3 Ravitaillez.
+Lorsque je quitte la zone d'Expédition − Vous pouvez me mettre dans la zone de Mana de mon propriétaire. Si vous ne le faites pas, piochez une carte.
+Échelle v0.10+ : 30.071%
+Échelle v0.25+ : 75.941%
+Échelle v0.27+ : 24.2%
+
+- COMMENT METTRE OU ENLEVER LES SONS ?
+Depuis la v0.26 des sons ont été ajoutés. C'est possible d'éditer le fichier Altered.exe.config
+Pour entendre les sons : <add key="SoundEnabled" value="true"/>
+Pour ne pas entendre les sons : <add key="SoundEnabled" value="false"/>
+Pour l'instant, il n'y a qu'un seul son d'appareil photo quand on clic sur le bouton calculer ("true" par défaut)
+
+
+/*
+NOTE DE MISE À JOUR [Backlog] :
+
+Évolutions à venir : 
+=> Release de la version 1.0 d'AlteRate prévu le 13 septembre 2024
+- Évolutions post v1.0
+[] Notification qui confirme l'enregistrement d'une nouvelle capacité unique
+
+
+---
+
+
+v1.0 :
+[o] Ajout d'un logger (Logs disponibles dans le répertoire Logs)
+[o] Ajouter les logos à la place du texte {fleche}, {main}, {reserve}
+[o] Nouveau design des biomes
+[o] Changement de l'executable en AlteRate.exe
+[o] Une seule instance d'AlteRate peut être executé sur la même session utilisateur
+[o] Taille de la police pour le nom du Personnage augmentée, sans modifier la taille dans la liste déroulante
+[o] Optimisation du code
+[] Un installeur permet d'installer AlteRate
+
+v0.27 : (02.09.2024)
+[o] Amélioration de l'IHM
+[o] Filtre dans la liste des noms de Personnage quand on tape une lettre au clavier
+[o] Trie des Personnages par Faction puis par Nom
+[o] Le logo de l'extension peut être modifié
+[o] Optimisation du code
+[o] Prise en compte des Alt Art KS si le logo KS est sélectionné
+[o] Correction du score de certaine capacité
+[o] Les erratas des 3 cartes suivantes ont volontairement été reproduit (Illustrateur errata BTG KS édition : Fahmi Fauzi) : 
+- Amahle, Paria Asgarthi (Illustrateur original BTG : Khoa Viet)
+- Encrière de l'Ouroboros (Illustrateur original BTG : Khoa Viet)
+- Jian, Superviseur d'Assemblage (Illustrateur original BTG : Khoa Viet)
+[o] Ajout de nouvelle liste pour la création de capacité (Sacrifier, Boost, carte, Tout)
+[o] trie automatique (ordre alphabétique) des listes de création d'une capacité unique
+[o] Ajout d'une image de fond pour la création d'une capacité
+[o] Nouveau bouton Enregistrer sur l'écran de création d'une capacité, pour enregistrer et continuer la création d'une nouvelle capacité.
+[o] À la création d'une nouvelle capacité, ajoute automatiquement un point de ponctuation s'il n'y en a pas.
+[o] Alimentation des listes déroulante de catégorie/terme
+[o] Suppression de toutes les capacités uniques (les scores ne correspondent plus à la nouvelle échelle)
+[o] Ajout de capacités uniques
+[o] Vérification des scores de chaque morceau de capacité (cela modifie en profondeur les scores générés)
+
+v0.26 : (26.08.2024)
+[o] Couleur du bouton calculer s'adapte à la faction
+[o] Optimisation du code
+[o] Amélioration de l'IHM
+[o] Filtre sur les listes de création d'une capacité
+[o] Correction du score de certaine capacité
+[o] Affichage d'un QR Code sur la capture d'écran 
+[o] Ajout d'un son (paramètrable) quand on calcul un score, au moment de la capture d'écran
+
+v0.25 : (24.08.2024)
+[o] Nouvelle illustration de la gem unique en haut de la carte
+[o] Nouveau design doré pour les logo de faction
+[o] Alimentation des listes déroulante de catégorie/terme
+[o] Ajout de capacités uniques
+[o] La zone de soutien n'apparait pas sur la capture d'écran si la carte unique n'a pas de capacité de soutien
+[o] Ajout d'un logo de Faction et Out Of Faction en plus du nom du Personnage
+[o] Affichage amélioré des personnages dans la liste déroulante du titre
+[o] Nouvelle façon de compter les points d'une carte
+[o] Ajout des sous-types d'un personnage
+[o] Le nom de l'illustrateur peut être vu en laissant la souris sur le nom du Personnage
+[o] Selectionner un personnage en cliquant à gauche (faction) ou à droite (OoF) du nom permet de pré-selectionner la faction de la carte
+
+v0.23 : (22.08.2024) 
+- Optimisation du code
+- Remplacement des fichiers Personnages suivant : Fée Clochette, Danseuse d'Étoffe Lyra, pour des problèmes divers
+- Amélioration de l'IHM
+- Correction d'un bugs majeur sur le calcul de la capacité de soutien
+- On peut voir des info-bulles sur la puissance : ensemble des biomes, capacité 1, capacité 2, capacité 3, soutien.
+- Animation des barres dans les biomes en fonction du nombre renseigné (soit plus petite, soit plus grande)
+
+v0.22 : (21.08.2024)
+- Alimentation des listes déroulante de catégorie/terme
+- Ajout de capacités uniques
+- Ajout de la date de release de la version
+- Correction du score de certaine capacité
+- Création d'un répertoire partagés _Nos_uniques pour permettre aux joueurs de publier les cartes qu'ils ont notés avec AlteRate
+lien vers ce répertoire : https://drive.google.com/drive/folders/1N1m0nDZoN3GMcqzeqtkHLs9xf7A7Mh7x?usp=sharing
+- Amélioration de l'IHM
+- Le bouton Reset n'apparait plus sur la capture d'écran de la carte
+- Affichage du backlog par ordre de priorité (en haut = prioritaire)
+- Ordre des tabulations modifiées : coût de main > coût de réserve > Forêt > Montagne > Eau > Capacités
+- Optimisation du code
+- Pourcentage avec toujours 3 chiffres après la virgule dans le nom du fichier PNG
+- Texte des capacités en relief
+- Ajout des accents, diacritique et typographie dans le nom du Personnage
+
+v0.21 : (20.08.2024)
+- Certain composant n'apparaissent plus sur la capture d'écran pour laisser place à l'illustration du Personnage
+- Implémentation des personnages qui n'avaient pas encore d'illustration
+- Ajout de remerciements à la fin du fichier LISEZ-MOI.txt
+- Possibilité de voir l'illustration entière si on reste cliqué dessus. Relacher le bouton de la souris affiche de nouveau les statistiques
+
+v0.20 : (20.08.2024)
+- Choisir un Personnage en cliquant sur le titre de la carte, affiche son illustration (si l'illustration n'existe pas, une par défaut)
+- Amélioration de l'IHM
+- Optimisation du code
+
+v0.19 : (19.08.2024)
+- Possibilité de filtrer les listes déroulante en tapant une seule lettre au clavier
+- Calcul d'un pourcentage de puissance pour donner une indication clair d'un score de carte unique (à la place de la moyenne)
+- Amélioration de l'IHM
+- Correction du score de certaine capacité
+
+v0.18 : (17.08.2024)
+- Alimentation des listes déroulante de catégorie/terme
+- Ajout de capacités uniques
+- Ajout de la version en bas à droite de la carte
+- Correction de bugs mineur
+- Dédoublonnage des capacités uniques (si vous créez plusieurs fois la même capacité, une seule sera prise en compte)
+- Correction du score de certaine capacité
+- Nouveau format pour le nom du fichier : [<moyenne>] <lettre de faction> <nom> (<score main>_<score réserve>) <date>
+
+v0.17 : (14.08.2024)
+- Le nom du fichier commence par la moyenne du score de la carte [(Main + Réserve) / 2]
+- Ajout d'un score moyen entre la main et la réserve
+- Ajout du score de main/réserve dans le nom du fichier (dans le répertoire PNG) sous la forme [<Main>_<Réserve>]
+- Nouveau bouton permettant de réinitialiser complètement la carte (en bas à gauche)
+
+v0.16 : (12.08.2024)
+- Alimentation des listes déroulante de catégorie/terme
+- Correction de bugs mineur
+- Ajout de majuscules dans les phrases des capacités
+- Amélioration de l'IHM
+
+v0.15 : (10.08.2024)
+- Amélioration de l'IHM
+- Correction de bugs mineur
+- Alimentation des listes déroulante de catégorie/terme
+
+v0.13 : (08.08.2024)
+- Séparation en Catégorie et Terme pour la création d'une nouvelle capacité
+- Correction de bugs majeur
+- Alimentation des listes déroulante de catégorie/terme
+
+v0.12 : (07.08.2024)
+- Trie automatique des fichiers capacites.txt et soutiens.txt
+- Possibilité d'ajouter une nouvelle capacité ou soutien via l'interface (pour l'instant il faut redémarrer AlteRate après avoir créer une capacité pour la voir dans la liste)
+
+v0.10 : (02.08.2024)
+- Les coûts sont maintenant limités à des caractères numériques
+- Le titre d'une carte est limité à 30 caractères aphabétiques et espaces
+- Amélioration de l'IHM
+- Nouvelle façon de compter les points d'une carte
+- Ajout de capacités uniques
+
+v0.09 : (31.07.2024)
+- Amélioration de l'IHM
+- Optimisation du code
+- Ajout de capacités / soutiens issu des cartes uniques
+- Export une capture d'écran dans le dossier PNG quand on clic sur le bouton Calculer
+- Possibilité de donner un titre à la carte (en cliquant sur UNIQUE)
+- Amélioration des performances pour ouvrir la listes des capacités et soutiens
+
+v0.08 : (30.07.2024)
+- Amélioration de l'IHM
+- Toutes les capacités du set BTG (C, R, F) sont implémentés
+- Tous les soutiens du set BTG (C, R, F) sont implémentés
+- Correction de bugs mineur
+
+v0.07 : (29.07.2024)
+- Ajout des icones dans le texte des capacités/soutiens
+- Mise à jour des fichiers capacites.txt et soutiens.txt
+- Nouvelle façon de compter les points d'une carte
+- Ajout d'une icone pour l'application
+- Correction de bugs mineur
+
+v0.06 : (27.07.2024)
+- Assets des cartes unique en fond
+- Bouton qui permet de changer la faction de la carte (cliquez en haut à droite sur le logo de la faction)
+- Ajout de nouvelles capacités
+- Ajout de nouveaux effets soutien
+- Correction de bugs mineur
+- Amélioration général de l'interface
+
+v0.05 : (26.07.2024)
+- Nouvelle interface sur fond d'une carte unique axiom
+- Amélioration de la stabilité générale
+
+v0.03 : (26.07.2024)
+- Correction de bugs mineur
+- Séparation en 2 fichiers de ressource capacites.txt et soutiens.txt
+- Ajout de capacités dans le fichier
+- Nouvelle façon de compter les points d'une carte
+
+v0.02 : (25.07.2024)
+- Correction de bugs mineur
+- Ajout de capacités dans le fichier
+
+v0.01 : (25.07.2024)
+- Création de l'application AlteRate
+*/
+
+
+Remerciements :
+Merci à Régis Bonnessée d'avoir eu l'idée de créé Altered, et à toute l'équipe Equinox pour en avoir fait une réalité.
+Merci aux personnes (et ChatGPT) qui m'ont aidés dans ce projet, qui m'ont conseillés, ou tout simplement aux personnes qui utilisent AlteRate
+Un merci spécial à ceux qui m'ont beaucoup aidé à faire avancer ce projet ou participe activement pour faire vivre Altered : 
+- Spiring, Pollux Troy, Keyuko, Amaury, JusteBBTV, Val & PL, ClaedeusFR, Maxildan, et j'en oublie <3
+
+----------------------------------------------------------------------------------------------------------------------------------
+Si tu rencontre un bug, si tu as une suggestion, tu peux m'écrire à Ticoche@gmail.com avec comme objet "AlteRate <texte libre>"
+tu peux également me contacter sur discord : https://discord.com/invite/altered-tcg-francophone-1204719182957256774
+Lien vers le répertoire drive partagé pour télécharger AlteRate : https://drive.google.com/drive/folders/1mAjCIdx8fq2zuu4UtM4W7jBZDvan4L_S?usp=sharing
+Lien vers la base des captures d'écran des cartes uniques : https://drive.google.com/drive/folders/1N1m0nDZoN3GMcqzeqtkHLs9xf7A7Mh7x
+----------------------------------------------------------------------------------------------------------------------------------
